@@ -320,6 +320,7 @@ class Game {
     }
     if(player.fuel<=0){
     gameState=2
+    this.gameOver()
     }
     }
 
@@ -332,6 +333,16 @@ class Game {
         imageSize: "100x100",
         confirmButtonText: "Ok",
       });
+    }
+    gameOver(){
+    swal({
+   title:`fim de jogo`,
+   text:"ops você perdeu a corrida",
+   imageUrl:"https://cdn.shopify.com/s/files/1/1061/1924/products/Thumbs_Down_Sign_Emoji_Icon_ios10_grande.png",
+   imageSize:"100x100",
+   confirmButtonText:"ok"
+    })
+    
     }
 
     end(){
